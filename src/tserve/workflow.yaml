@@ -1,0 +1,16 @@
+models:
+    min-workers: 1
+    max-workers: 1
+    batch-size: 4
+    max-batch-delay: 100
+    retry-attempts: 5
+    timeout-ms: 300000
+
+    detect:
+      url: detect.mar
+
+    ocr:
+      url: ocr.mar
+
+dag:
+  detect: [ocr]
